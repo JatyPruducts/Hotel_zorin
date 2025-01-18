@@ -24,3 +24,6 @@ jobs:
       # Сборка решения
       - name: Build
         run: dotnet build Hotel/Hotel.csproj --configuration Release --no-restore
+
+      - name: Tests
+        run: dotnet tests
