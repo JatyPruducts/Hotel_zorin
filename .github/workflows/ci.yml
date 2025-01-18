@@ -4,6 +4,12 @@ on:
   push:
     branches: [ lab5 ]
 
+name: CI
+
+on:
+  push:
+    branches: [ lab5 ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,5 +31,6 @@ jobs:
       - name: Build
         run: dotnet build Hotel/Hotel.csproj --configuration Release --no-restore
 
+      # Запуск тестов
       - name: Tests
-        run: dotnet tests
+        run: dotnet test Hotel/Hotel.csproj --configuration Release
