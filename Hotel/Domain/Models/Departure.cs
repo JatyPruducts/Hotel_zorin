@@ -1,6 +1,6 @@
 namespace Hotel.Domain.Models;
 
-public class Depature
+public class Departure
 {
     public int Id { get; set; }
     public string Code { get; set; } = null!;
